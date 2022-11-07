@@ -1,0 +1,44 @@
+body{
+  background-color: var(--dark-alt);
+  color: var(--light);
+}
+
+.App
+{
+  padding: 32px;
+}
+
+h1
+{
+  font-size: 40px;
+  margin-bottom: 32px;
+}
+
+h4
+{
+  font-size: 18px;
+  color: var(--light-alt);
+  margin-bottom: 16px;
+}
+
+.todoform
+{
+  display: flex;
+  width: 100%;
+}
+
+.todoinput
+{
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 16px;
+  width: 80%;
+}
+
+.addbtn
+{
+  color: white;
+  background-color: blue;
+  padding: 10px;
+}
