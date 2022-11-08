@@ -11,10 +11,10 @@ function App() {
     () => {
       axios.get("http://localhost:8000/todos")
       .then((res) => setTodos(res.data) )
-    }, []);
+    }, [todos]);
 
   const addTask = (e) => {
-    //e.preventDefault();
+   
     if(newTodo!=="")
     {
       axios.post("http://localhost:8000/todos/new", {title: newTodo})
@@ -34,7 +34,7 @@ function App() {
   
       <h4>Your Tasks</h4>
       {todos.map(todo => (
-      <Todo todo={todo} />
+      <Todo todo={todo} setTodos={setTodos} todos={todos} />
       ))}
     </div>
   );
