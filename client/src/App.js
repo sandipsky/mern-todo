@@ -31,7 +31,8 @@ function App() {
     
       <input type="text" className='todoinput' onChange={e =>  setNewTodo(e.target.value)} value={newTodo} placeholder='Write Something' />
       <button onClick={addTask} className='addbtn'>Add Task</button>
-  
+      <br />
+      <br />
       <h4>Your Tasks</h4>
       {todos.map(todo => (
       <Todo todo={todo} setTodos={setTodos} todos={todos} />

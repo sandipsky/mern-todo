@@ -42,15 +42,15 @@ router.put('/update/:id', async (req, res) => {
 
 
 
-//get completed tasks
-// router.get('/completed/:id', async (req, res) => {
-// 	const todo = await Todo.findById(req.params.id);
+//toggle complete
+router.get('/complete/:id', async (req, res) => {
+	const todo = await Todo.findById(req.params.id);
 
-// 	todo.complete = !todo.complete;
+	todo.complete = !todo.complete;
 
-// 	todo.save();
+	todo.save();
 
-// 	res.json(todo);
-// })
+	res.json(todo);
+})
 
 module.exports = router
